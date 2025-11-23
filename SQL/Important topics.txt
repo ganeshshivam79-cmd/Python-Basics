@@ -1,0 +1,17 @@
+1. giving alias in a query and same column in where clause cant be used
+2. use order by when using window function like row_number, rank
+3. dont use aggregate function like sum, min, max in whereclause
+4. on using lag careful on using prevoiusdate is not null should be added
+5. Alias column given we cant use it in where , groupby. only we can  use it in order by
+6. Partition by is used for windows function and group by used for aggregate function
+where parition by dont reduce row and group by reduce rows.
+
+
+Rank vs Dense rank 
+1. Rank 1 
+2.Rank2 likewise 
+
+rownumber 
+1
+2
+3 it can iterate even for same vale

@@ -1,0 +1,3 @@
+1. Aggregate function cannot be used in where condition
+ Avg, sum, max, min 
+ 2.having to use , we should have where class
