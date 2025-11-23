@@ -1,0 +1,4 @@
+whenever apply is there we should have lambda
+sort_values(ascending=False) is better than nlargest for grouping multiple columns
+groupby is there and then correspnding column should in [] for mean, sum, average()
+subset is most for drop, dropna, drop_duplicates(), fillna but fillna needs to have methods
