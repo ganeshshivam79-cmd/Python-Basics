@@ -1,3 +1,9 @@
+"""
+Pickling is the process of converting a Python object hierarchy into a byte stream.
+ This byte stream can then be: Stored in a file, Transmitted over a network, and Stored in a 
+ database
+"""
+
 import pickle
 
 # Data to save
