@@ -59,6 +59,8 @@ df.dropna(subset=["name"], inplace=True)
 
 df = df[df["name"].notna()]
 print(df["name"].isna())
+#notna for removing None
+@isna gives false when it doesnt have None value
 "it will delete and whole dataframe is changed based on name column"
 
 df.columns = df.columns.str.lower()

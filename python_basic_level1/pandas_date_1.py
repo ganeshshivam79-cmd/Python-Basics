@@ -15,5 +15,5 @@ print(unique_years)
 df["month_name"] = df["date"].dt.month_name()
 print(list(df["month_name"]))
 
-
+df["day_name"] = df["date"].dt.day_name()   #monday, #tuesday
 
