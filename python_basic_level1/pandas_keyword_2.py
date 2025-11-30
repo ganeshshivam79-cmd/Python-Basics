@@ -16,4 +16,16 @@ print(df2)
 print(type(df2))
 
 
+"""boolean"""
+df.duplicated() -- boolean
+df.isna()
+df.notna() -- check for non nan boolean return
+df["name"].str.startswith("key") -- boolean
 
+df.dropna(subset=[], inplace=True)
+df["name"].fillna("name1", inplace=True)
+
+df.groupby("name")["marks"].cumsum()
+df.isna().sum()
+
+df["count"] = df.groupby("category")["amount"].transform("sum")

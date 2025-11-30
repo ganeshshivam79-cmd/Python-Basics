@@ -11,5 +11,5 @@ print(date_range)
 diff = relativedelta(end_date, start_date)
 years = diff.years
 months = diff.months
-days_left =
+days_left =diff.days
 print(diff, years, months, days_left)

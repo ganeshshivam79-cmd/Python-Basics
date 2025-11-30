@@ -14,9 +14,13 @@ df.drop_duplicates(subset=["id", "name"])
 
 result = pd.concat([df1, df2], axis=0).reset_index(drop=True)
 "joining same column with next rows and drop index so all can be 1,2,4"
+"dop means we are dropring a index"
 
 result = pd.concat([df1, df2], axis=1)
 "joining different column with diff name in each dataframe"
+
+df.index = range(len(df))
+"set the index"
 
 result = pd.merge(df1, df2, on='id', how='inner')
 "joing on using a common column"
@@ -83,7 +87,7 @@ df["name"].fillna("hero",inplace=True)
 
 
 df.fillna(method="ffill", subset=["col1", "col2"], inplace=True)
-
+it will fill col1 and col2 null values with previous row of the values
 
 first_5_cols = df.iloc[:, :5]
 """take only first 5 columns"""
