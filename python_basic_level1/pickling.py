@@ -1,7 +1,11 @@
 """
 Pickling is the process of converting a Python object hierarchy into a byte stream.
- This byte stream can then be: Stored in a file, Transmitted over a network, and Stored in a 
- database
+This byte stream can then be: Stored in a file, Transmitted over a network, and Stored in a 
+database
+
+Unpickling is the inverse process of converting a pickled byte stream back into a Python object
+hierarchy. 
+
 """
 
 import pickle
