@@ -7,6 +7,7 @@ First 5 records fetching
 select * from student s1 where 5>=(select count(distinct GPA) from student s2 where s1.GPA<=s2.GPA) order by GPA desc;
 
 
+
 Write an SQL query to fetch the list of Students with the same GPA.
 select * from student s1 join student s2 on s1.GPA=s2.GPA where s1.student_name!=s2.student_name;
 
@@ -22,6 +23,15 @@ CROSS APPLY STRING_SPLIT(Orders.Items, ',') as Split;
 5.count, SUM, MIN, MAX -- Aggregate function
 6.offset, limit, Top 3, COALESCE
 7.charindex, Reverse
+
+
+cast(student_id) as int
+CAST(REPLACE(salary, ',', '') AS INT) BETWEEN 50000 AND 60000;
+SELECT CHARINDEX('at', 'database');
+SELECT CHARINDEX('a', 'banana', 3);
+-- returns 4 searching starts at position 3
+select reverse("data");
+SELECT SUBSTRING('Sidekick', 1, 4)
 
 CREATE TABLE student (
     student_id INT PRIMARY KEY,

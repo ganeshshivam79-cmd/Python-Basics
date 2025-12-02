@@ -107,6 +107,8 @@ ALTER TABLE employees MODIFY COLUMN salary INT;
 
 ALTER TABLE employees DROP COLUMN salary ;
 
+ALTER TABLE table_name RENAME COLUMN old_name TO new_name;
+
 SELECT TO_CHAR(date_column, 'Month') AS month_name FROM table_name;
 
 
