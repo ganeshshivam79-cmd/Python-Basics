@@ -17,3 +17,19 @@ print(list(df["month_name"]))
 
 df["day_name"] = df["date"].dt.day_name()   #monday, #tuesday
 
+p1["date_str"] = pd.Timestamp.today().date()
+
+
+.dt.year → Returns the year (e.g., 2021)
+.dt.month → Month as a number (e.g., 7 for July)
+.dt.month_name() → Method, not attribute. See methods below.
+.dt.day → Day of the month (e.g., 15)
+.dt.dayofweek → Day of the week as number (Monday=0, Sunday=6)
+.dt.day_name() → Method
+.dt.quarter → Quarter of the year (1, 2, 3, or 4)
+.dt.date → Returns just the date part
+.dt.time → Time part only
+
+
+df["just_time"] = df["event_time"].dt.time
+it will take only time from date,month column
