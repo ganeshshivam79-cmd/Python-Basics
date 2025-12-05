@@ -1,0 +1,28 @@
+spark.sql.engine — What It Powers Internally:
+
+The Spark SQL Engine is the core execution engine behind:
+
+✅ spark.sql() (SQL queries)
+✅ DataFrame API
+✅ Dataset API
+
+⚙️ What Does It Do Internally?
+
+Catalyst Optimizer (Logical + Physical Plan Optimizer)
+Analyzes and optimizes query plans.
+Performs operations like predicate pushdown, constant folding, projection pruning, etc.
+
+Tungsten Engine
+Optimizes memory and CPU usage.
+Generates Java bytecode for execution (whole-stage code generation).
+
+🔥 Result:
+
+Your code (SQL/DataFrame/Dataset) is converted to an optimized plan.
+Spark generates bytecode for fast, efficient execution.
+This bytecode runs inside the executors.
+
+🧠 Summary:
+Spark SQL Engine = Catalyst + Tungsten
+Powers: spark.sql(), DataFrame, and Dataset APIs
+Output: Optimized bytecode → Efficient execution on executor
