@@ -12,3 +12,28 @@ class Unittestfunction(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+""""" 
+assertEqual
+assertNotEqual
+
+assertTrue
+assertFalse
+
+assertIsNone
+assertIsNotNone
+
+assertIs
+assertIsNot
+
+assertIsInstance
+assertNotIsInstance
+
+assertIn
+assertNotIn
+
+assertGreater
+assertGreaterEqual
+assertLess
+assertLessEqual
+"""

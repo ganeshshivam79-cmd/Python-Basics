@@ -15,3 +15,61 @@ c = Child()
 
 call_greet(p)  # Hello from Parent
 call_greet(c)  # Hello from Child
+
+-------------------------------------------------------"""  """
+Call method using Class.method(object)
+
+class Parent:
+    def greet(self):
+        print("Hello from Parent")
+
+class Child(Parent):
+    def greet(self):
+        print("Hello from Child")
+
+p = Parent()
+c = Child()
+
+Parent.greet(p)   # Hello from Parent
+Child.greet(c)    # Hello from Child
+
+
+-------------------------------------------------------"""  """
+Call method using getattr() (dynamic call)
+
+class Parent:
+    def greet(self):
+        print("Hello from Parent")
+
+c = Parent()
+
+method = getattr(c, "greet")
+method()   # Hello from Parent
+
+-------------------------------------------------------"""  """
+Call method using getattribute()
+
+class Parent:
+    def greet(self):
+        print("Hello from Parent")
+
+c = Parent()
+
+c.__getattribute__("greet")()   # Hello from Parent
+-------------------------------------------------------"""  """
+
+Duck typing
+
+class Stranger:
+    def greet(self):
+        print("Hello from Stranger")
+
+def call_greet(obj):
+    obj.greet()
+
+call_greet(Stranger())   # Hello from Stranger
+
+-------------------------------------------------------"""  """
+
+
+
