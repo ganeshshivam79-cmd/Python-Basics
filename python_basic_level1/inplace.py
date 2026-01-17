@@ -3,7 +3,7 @@ df.dropna(inplace=True)	                Drops rows with NaN
 df.fillna(value, inplace=True)	        Fills NaNs with a value
 df.drop(columns, inplace=True)	        Drops specific columns
 df.rename(columns=..., inplace=True)	Renames columns
-df.sort_values(..., inplace=True)	    Sorts the DataFrame
+df.sort_values(by=["id","name"], inplace=True)	    Sorts the DataFrame
 df.reset_index(inplace=True)	        Resets the index
 
 

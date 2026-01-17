@@ -33,3 +33,16 @@ p1["date_str"] = pd.Timestamp.today().date()
 
 df["just_time"] = df["event_time"].dt.time
 it will take only time from date,month column
+
+df = pd.DataFrame({
+    'date': pd.date_range('2024-01-01', periods=5, freq='M')
+})
+
+
+dates = pd.date_range(start="2025-01-01", end="2035-01-01", freq="YS")
+
+
+'D' → daily
+'ME' → month end
+'MS' → month start
+'H' → hourly

@@ -10,5 +10,6 @@ def selection_sort(l1):
 
 
 print(selection_sort([10, 9, 8, 2, 3, 4, 1, 0]))
-
-
+"""
+find the min index and swap
+"""

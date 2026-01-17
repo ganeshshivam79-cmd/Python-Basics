@@ -106,6 +106,6 @@ df.loc[3:5, ["name", "age"]]
 df.loc[df["name"] == "Alice", "age"] = 28  # Update age where name is Alice
 
 df.loc[(df["name"] == "ajith") & (df["mark"] > 90), "age"] = 18  # ← numeric
-df["age"] = df.apply(lambda x: 18 if x["name"] == "ajith" and x["marks"] > 90 else x["age"], axis=1)
+df["age"] = df.apply(lambda x: 18 if x["name"] == "Prashant" and x["marks"] > 90 else x["age"], axis=1)
 
 
