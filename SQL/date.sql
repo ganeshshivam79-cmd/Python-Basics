@@ -45,9 +45,9 @@ DATEPART(second, date)
 DATEPART(millisecond, date)
 
 
-YEAR(date)
-MONTH(date)
-DAY(date)
+YEAR(date)   -- 2023
+MONTH(date)  --  1to 12 month
+DAY(date)   -- 1 to 31
 
 All are integers above one give
 
