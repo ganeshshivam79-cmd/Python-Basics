@@ -3,3 +3,6 @@ sort_values(ascending=False) is better than nlargest for grouping multiple colum
 groupby is there and then correspnding column should in [] for mean, sum, average()
 subset is most for  dropna, drop_duplicates(), fillna but fillna needs to have methods
 no subset is needed for drop
+concat we need to drop index
+merge we dont need to do anything
+
