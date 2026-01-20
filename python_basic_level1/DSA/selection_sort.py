@@ -1,15 +1,15 @@
 def selection_sort(l1):
-    min_index = 0
-    for i in range(0, len(l1) - 1):
+    for i in range(len(l1) - 1):
+        min_index = i   # ✅ reset for every pass
+
         for j in range(i + 1, len(l1)):
-            if l1[min_index] > l1[j]:
+            if l1[j] < l1[min_index]:
                 min_index = j
-        if l1[min_index] < l1[i]:
-            l1[min_index], l1[i] = l1[i], l1[min_index]
+
+        l1[i], l1[min_index] = l1[min_index], l1[i]
+
     return l1
 
-
-print(selection_sort([10, 9, 8, 2, 3, 4, 1, 0]))
 """
-find the min index and swap
+find the min index and swap and with others and in end swap with main element
 """

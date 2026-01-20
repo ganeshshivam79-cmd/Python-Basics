@@ -1,11 +1,11 @@
 def insertion_sort(l1):
-    for i in range(0,len(l1)):
-        j=i-1
-        for m in range(0,i):
-            if j>=0 and l1[j+1]<l1[j]:
-                l1[j+1],l1[j]=l1[j],l1[j+1]
-                j=j-1
+    for i in range(1, len(l1)):
+        j = i - 1
+        while j >= 0 and l1[j] > l1[j + 1]:
+            l1[j], l1[j + 1] = l1[j + 1], l1[j]
+            j -= 1
     return l1
+
 
 print(insertion_sort([10,3,4,1,9,7,6,0,2]))
 
