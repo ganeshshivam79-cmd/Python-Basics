@@ -16,6 +16,7 @@ c = Child()
 call_greet(p)  # Hello from Parent
 call_greet(c)  # Hello from Child
 
+# call by object reference
 -------------------------------------------------------"""  """
 Call method using Class.method(object)
 

@@ -10,3 +10,8 @@ setattr(obj, "x", 25)
 print(getattr(obj, "x"))  
 delattr(A, "y")            # give the class name A directly and dont use variable here
 print(hasattr(A, "y"))  #checks if the attribute exists.
+
+getattr
+setattr
+hasattr
+delattr
