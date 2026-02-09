@@ -69,5 +69,4 @@ ORDER BY [year];
 with below_revenue as ( select customer, ntile(10) over ( partition by customer_id order by total_amount desc ) as revenue from customer)
 select customer_id, revenue from below_revenue where revenue=10;
 
-select id, order_date, lag(order_date) over ( partition by id order by order_date) as prevdate from orders 
-where datetdiff(day, prevdate, order_date)=1;
+

@@ -12,6 +12,7 @@ def decorator(func):
         print("No data")
     return wrapper
 
+
 @decorator
 def say_hello():
     print("I am Mahesh")
