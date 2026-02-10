@@ -20,6 +20,8 @@ df["day_name"] = df["date"].dt.day_name()   #monday, #tuesday
 p1["date_str"] = pd.Timestamp.today().date()
 
 
+
+
 .dt.year → Returns the year (e.g., 2021)
 .dt.month → Month as a number (e.g., 7 for July)
 .dt.month_name() → Method, not attribute. See methods below.
@@ -46,3 +48,10 @@ dates = pd.date_range(start="2025-01-01", end="2035-01-01", freq="YS")
 'ME' → month end
 'MS' → month start
 'H' → hourly
+'YS' → Year start
+
+p1["date_time"] = pd.Timestamp.now()
+#2026-02-10 09:10:29.123456
+
+p1["date_time"] = pd.Timestamp.now().date()        
+# 2026-02-10
