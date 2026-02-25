@@ -24,3 +24,5 @@ class Solution(object):
             current.next = list2
 
         return dummy.next
+
+we used current =dummy and in return dummy.next
