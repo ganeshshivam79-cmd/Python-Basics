@@ -11,3 +11,4 @@ print(d)
 #for value  condition
 d = {k.upper(): v if v<10 else v+10 for k, v in d.items()}
 print(d)
+

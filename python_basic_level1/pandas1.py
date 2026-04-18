@@ -99,7 +99,7 @@ concate two tables with same column name
 
 result = pd.concat([df1, df2], ignore_index=True)
 # need ignore index are else they aligned differently
-convert a colu mn into list
+convert a column into list
 
 # Convert 'Name' column (string type) into a list
 name_list = df['Name'].tolist()

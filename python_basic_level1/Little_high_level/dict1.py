@@ -30,3 +30,5 @@ print(d2)
 d = {"a": 1, "b": 2}
 rev = {v: k for k, v in d.items()}
 print(rev)
+
+val=sorted(d1.items(),key=lambda x:min(x[1]))
