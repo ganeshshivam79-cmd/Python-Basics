@@ -1,0 +1,16 @@
+import pandas as pd
+df = pd.DataFrame({
+    "id": [101, 102, 103],
+    "name": ["Arun", "Bala", "Charan"],
+    "marks": [85, 92, 78]
+})
+
+print("Original DataFrame")
+print(df)
+df2=df.copy()
+df.index=df["id"]
+print(df)
+df=df.set_index("id")
+print(df)
+
+"set index means the column completely changed to index, but if df.index it wont change convert as index"

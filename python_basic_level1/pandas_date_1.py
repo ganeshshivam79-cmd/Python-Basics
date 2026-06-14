@@ -46,3 +46,9 @@ dates = pd.date_range(start="2025-01-01", end="2035-01-01", freq="YS")
 'ME' → month end
 'MS' → month start
 'H' → hourly
+
+
+df = df[
+    (df['date'] <= pd.Timestamp.today()) &
+    (df['date'] >= pd.Timestamp.today() - pd.DateOffset(months=3))
+]

@@ -45,10 +45,7 @@ df['column'].replace(old_value, new_value)
 df.replace("hetre", "data", inplace=True)
 #for specific columns it will replace
 df["sys"].replace("hetre", "data", inplace=True)
-df[["sys", "mrd"]] \
-
-
-    = df[["sys", "mrd"]].replace("hetre", "data")
+df[["sys", "mrd"]] = df[["sys", "mrd"]].replace("hetre", "data")
 
 
 df['rank'] = df.groupby('subject')['marks'].rank(ascending=False)
