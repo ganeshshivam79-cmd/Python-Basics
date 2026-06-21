@@ -29,3 +29,7 @@ region_sales = df.groupby("Region")["Total_amount"].sum()
 top_products = df.groupby("Product")["Quantity"].sum().nlargest(3)
 # 8. Save final DataFrame
 df.to_csv("val.csv", index=False)
+
+cumulative sum each egtteing added
+region_sales = df.groupby("Region")["Total_amount"].cumsum()
+df["total"] = df.groupby("region")["amount"].transform("sum")

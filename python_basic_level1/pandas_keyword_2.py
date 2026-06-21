@@ -39,3 +39,5 @@ df.isna().sum()
 df["count"] = df.groupby("category")["amount"].transform("sum")
 cumsum() add values one by one 10 one, 10+5=15 one but transform sum add all and put each same value like
 15,15
+
+(df['name'].isin(['k', 'n']), inplace=True)
