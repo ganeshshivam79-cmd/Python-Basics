@@ -1,0 +1,1 @@
+students_not_in_marks = df_students[~df_marks["student_id"].isin(df_students["student_id"])]
