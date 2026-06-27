@@ -26,4 +26,7 @@ print(cat.sound())  # Output: Meow!
 An abstract method is a method that is declared but not given any implementation (body).
 It simply defines what a method should do, not how it does it.
 The actual implementation is provided by a subclass (child class).
+
+An abstract method is a method that is declared but has no implementation in the parent class.
+It forces child classes to implement it.
 """
