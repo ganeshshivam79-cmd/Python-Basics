@@ -236,3 +236,7 @@ df.to_sql("employees",engine,if_exists="replace",index=False)
 # duplicated drop_duplicates fillna dropna isna notna
 # idxmax idxmin cumsum pivot_table
 # SQLAlchemy create_engine read_sql_query read_sql_table to_sql
+
+df["top_marks"] = df.groupby("class_no")["marks"].transform("max")
+
+print(df)

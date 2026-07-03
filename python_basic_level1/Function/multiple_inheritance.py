@@ -6,3 +6,5 @@ class B:
 
 class C(A, B):
     pass
+
+one class have many parent class
