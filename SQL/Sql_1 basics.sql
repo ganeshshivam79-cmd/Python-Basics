@@ -24,6 +24,16 @@ CROSS APPLY STRING_SPLIT(Orders.Items, ',') as Split;
 6.offset, limit, Top 3, COALESCE
 7.charindex, Reverse
 
+SELECT
+    id,
+    SUBSTRING(name, n, 1) AS letter
+FROM Student
+CROSS JOIN (
+    SELECT TOP 100
+        ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) AS n
+    FROM sys.objects
+) numbers
+WHERE n <= LEN(name);
 
 cast(student_id) as int
 CAST(REPLACE(salary, ',', '') AS INT) BETWEEN 50000 AND 60000;
@@ -39,6 +49,30 @@ CREATE TABLE student (
     Age INT AUTO_INCREMENT,
     class INT DEFAULT 7
 );
+----------------------------------------------------------------
+
+see two primary key id , val1 cant be created directly 
+so use this format
+CREATE TABLE StudentCourse (
+    student_id INT,
+    course_id INT,
+
+    PRIMARY KEY (student_id, course_id)
+);
+constrain is needed for foreign key always
+CREATE TABLE Department (
+    department_id INT PRIMARY KEY
+);
+
+CREATE TABLE Student (
+    student_id INT PRIMARY KEY,
+    department_id INT,
+
+    CONSTRAINT FK_Student_Department
+        FOREIGN KEY (department_id)
+        REFERENCES Department(department_id)
+);
+----------------------------------------------------------------
 
 
 SELECT DATENAME(year, '2017/08/25') AS DatePartString;
