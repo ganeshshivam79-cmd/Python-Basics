@@ -10,3 +10,5 @@ animals = [Dog(), Cat()]
 
 for a in animals:
     a.sound()
+
+    """different class  calling same method"""
