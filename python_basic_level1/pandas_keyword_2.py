@@ -22,11 +22,12 @@ df.duplicated() -- boolean
 df.isna()
 df.notna() -- check for non nan boolean return
 df["name"].str.startswith("key") -- boolean
+df["student_id"] = df["student_id"].ffill()  
+df["name"].fillna("name1", inplace=True)
 
 df.dropna(subset=[], inplace=True)
 df["name"].fillna("name1", inplace=True)
-df["student_id"] = df["student_id"].ffill()
-
+df["student_id"] = df["student_id"].ffill() -- it will fill nan with previous value
 df.groupby("name")["marks"].cumsum()
 Name	Marks	Group_Marks
 A	3	3
@@ -35,6 +36,8 @@ B	1	1
 B	10	11
 
 df.isna().sum()
+
+
 
 df["count"] = df.groupby("category")["amount"].transform("sum")
 cumsum() add values one by one 10 one, 10+5=15 one but transform sum add all and put each same value like

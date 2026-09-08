@@ -2,8 +2,7 @@ df_div7 = df[df.index % 7 == 0] #index divisible by 7
 df=df[df["name"].isna()]#have only nan values
 
 df = df.reset_index().rename(columns={"index": "old_index"}) -- index renaming 
-df = df.set_index("col_name", drop=False) 
-df.index=df["col_name"] --#under the difference
+df = df.set_index("col_name", drop=False) so index is set and drop=False means column is still present in columnsdf.index=df["col_name"] --#under the difference
 column is moved to index and drop=False which means still column present under column list
 
 
@@ -41,7 +40,9 @@ df["age"] = df["age"].fillna(0)
 df["city"] = df["city"].replace("NY", "New York")  
 # replace values
 
-df = df.sort_values("salary", ascending=False)      
+df = df.sort_values("salary", ascending=False)  
+df = df.sort_values( by=["name", "salary"], ascending=[True, False]
+)    
 # sort by salary descending
 
 df = df.sort_index()                      
@@ -73,7 +74,8 @@ result = df.groupby("department")["salary"].sum()
 
 df = df.drop_duplicates(subset=["name"], keep="last")  
 # remove duplicates based on name, keep last
-
+df = df.drop_duplicates(subset=["name"], keep=False)
+#remove all duplicates without single proper value so value which present at once will be present
 df.loc[0,["name","age","id"]]
 df.iloc[2:10, 3:5]
 loc -- label based

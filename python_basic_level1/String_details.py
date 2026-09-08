@@ -4,7 +4,7 @@ a=b.count('python') == count objects
 re.fullmatch(r'[^a-zA-Z0-9\s]+', '@#')   # True
 re.fullmatch(r'[^a-zA-Z0-9\s]+', '@')    # True
 re.fullmatch(r'[^a-zA-Z0-9\s]+', '')     # False
-r'[^a-zA-Z0-9\s]+' -- ignore charcyer, number, spaces and check and give result 
+r'[^a-zA-Z0-9\s]+' -- ignore charcter, number, spaces and check and give result 
 
 d=re.sub(r'[^a-zA-Z0-9]','',"da gh @#")
 print -- dagh

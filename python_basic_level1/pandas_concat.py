@@ -8,10 +8,37 @@ pd.concat([df1, df2], axis=1, join="inner")  -- inner join matching Index
 pd.concat([df1, df2], axis=1, join="outer")  and pd.concat([df1, df2], axis=1)
 keeps all index and both are same 
 
+axis=0 → rows go down ↓
+axis=1 → columns go across →
+
+join='inner' → common columns/indexes
+join='outer' → all columns/indexes
+----------------------------------------------------------------------------------
+import pandas as pd
+
+df1 = pd.DataFrame({
+    "ID": [1, 2],
+    "Name": ["Alice", "Bob"]
+})
+
+df2 = pd.DataFrame({
+    "ID": [1, 2],
+    "Age": [25, 30]
+})
+
+df5 = pd.concat([df1, df2], axis=0)
+df5.reset_index(drop=True, inplace=True)
+
+print(df5)
+------------------------------------------------------------------------------------
+
 pd.merge(df1, df2, on="id", how="inner") 
 #concat axis=1 match by index and merge match by common value
 
-df.drop("age", axis=1)   # drop column
+pd.concat([df1, df2], axis=0, join="inner")  -- common column it takes
+pd.concat([df1, df2], axis=0, join="outer")  -- all column it takes
+
+df.drop("age", axis=1)   # d    rop column
 df.drop(0, axis=0)       # drop row index 0
 
 df.to_sql(

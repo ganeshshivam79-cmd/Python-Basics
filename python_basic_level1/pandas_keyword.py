@@ -64,6 +64,7 @@ print(df["name"].isna())
 @isna gives false when it doesnt have None value
 "it will delete and whole dataframe is changed based on name column"
 
+changing column names
 df.columns = df.columns.str.lower()
 df.columns = df.columns.str.strip()
 df.columns = df.columns.str.replace(" ", "")
@@ -87,13 +88,13 @@ df.fillna(method="ffill", subset=["col1", "col2"], inplace=True)
 it will fill col1 and col2 null values with previous row of the values
 
 first_5_cols = df.iloc[:, :5]
-"""take only first 5 columns"""
+s"""take only first 5 columns all rows"""
 df = df.iloc[:5, :5]
 "first 5 rows and 5 cols"
 df = df.iloc[:5]
 """first 5 rows and all columns"""
 df = df.iloc[3:8, :].reset_index(drop=True)
-"""it will take 3 to 7 values and reset index to 0,1,2"""
+"""it will take 3 to 7 values and reset index to 0,1,2 and all column right"""
 
 df.iloc[:, 0]        """First column (whatever its name is)1"""
 
@@ -102,7 +103,7 @@ df.loc[5, "age"]               # Value at row with index 5, column "age"
 df.loc[3:5, ["name", "age"]]
 df.loc[df["name"] == "Alice", "age"] = 28  # Update age where name is Alice
 
-df.loc[(df["name"] == "ajith") & (df["mark"] > 90), "age"] = 18  # ← numeric
+df.loc[(df["name"] == "Mahesh") & (df["mark"] > 90), "age"] = 18  # ← numeric
 df["age"] = df.apply(lambda x: 18 if x["name"] == "Prashant" and x["marks"] > 90 else x["age"], axis=1)
 
 

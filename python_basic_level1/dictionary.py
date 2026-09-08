@@ -13,3 +13,6 @@ dict1["a"]=[[10,2]]
 print(dict1["a"][0][1])
 dict1["a"].append([56])
 print(dict1)
+
+data = {"name": "John", "age": 25}
+print(data.get("name"))
