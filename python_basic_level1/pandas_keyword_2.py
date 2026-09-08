@@ -44,3 +44,4 @@ cumsum() add values one by one 10 one, 10+5=15 one but transform sum add all and
 15,15
 
 (df['name'].isin(['k', 'n']), inplace=True)
+df[["first_name", "last_name"]] = df["name"].str.rsplit(" ", n=1, expand=True)
