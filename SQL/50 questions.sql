@@ -95,12 +95,8 @@ WHERE total_amount > historical_90th;
 -------------------------------------------------------------------
 Position:   1    2    3
 Value:     100  200  300
-(n - 1) × percentile + 1
-(3 - 1) × 0.90 + 1
-2 × 0.90 + 1
-1.8 + 1
-= 2.8
-
-200 + 80% of (300 - 200)
-200 + 80
-= 280
+for positin 1 100 it will be None
+for position 2 it will get 100
+formula is 1+(n-1)*0.9 here n represnts 1 value [100] before value, so answer is 1 means 100
+but for position 3 we get two values [100, 200] so 1+(2-1)*0.9=2.9
+value[1]+0.9*(value[2]-value[1]) =100+(0.9*100)=190
