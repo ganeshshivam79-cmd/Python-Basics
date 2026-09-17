@@ -7,3 +7,9 @@ df["student_name"].sort_values()   # Series sort
 df.sort_values("student_name")     # DataFrame sort
 df.sort_values("student_name", inplace=True)
 print(df)
+
+df.sort_values(
+    by=["student_name", "id"],
+    ascending=[True, False],
+    inplace=True
+)
