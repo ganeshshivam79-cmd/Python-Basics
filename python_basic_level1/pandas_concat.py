@@ -64,3 +64,10 @@ df2 = pd.DataFrame({
 })
 df5 = pd.merge(df1, df2, on="ID")
 print(df5)
+
+| Code                   | Meaning                         |
+| ---------------------- | ------------------------------- |
+| `axis=0, join="outer"` | Stack rows, all columns         |
+| `axis=0, join="inner"` | Stack rows, common columns      |
+| `axis=1, join="outer"` | Combine columns, all indexes    |
+| `axis=1, join="inner"` | Combine columns, common indexes |
