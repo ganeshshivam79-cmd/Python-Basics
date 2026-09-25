@@ -14,3 +14,8 @@ df=df.set_index("id")
 print(df)
 
 "set index means the column completely changed to index, but if df.index it wont change convert as index"
+df.set_index(
+    "column_name",
+    drop=True,
+    inplace=False
+)
