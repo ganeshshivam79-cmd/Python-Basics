@@ -19,3 +19,30 @@ df.set_index(
     drop=True,
     inplace=False
 )
+##########################################################################################################################
+import pandas as pd
+
+df = pd.DataFrame({
+    "name": ["Mahesh", "Priya", "Arjun"],
+    "id": [1, 2, 3],
+    "marks": [85, 92, 78]
+})
+
+print("Original:")
+print(df)
+
+print("\n" + "="*60)
+print("STEP 1: df = df.set_index('name', drop=False)")
+print("="*60)
+df_step1 = df.set_index("name", drop=True)
+print(df_step1)
+
+
+
+print("\n" + "="*60)
+print("STEP 2B: df.reset_index(drop=True) - WITH drop=True")
+print("="*60)
+df_step2b = df_step1.reset_index()
+print(df_step2b)
+print("Columns:", df_step2b.columns.tolist())
+#############################################################################################
