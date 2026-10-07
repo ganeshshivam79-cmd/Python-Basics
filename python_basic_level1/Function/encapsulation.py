@@ -1,3 +1,4 @@
+
 class inst:
     def __init__(self, v1=0):
         self.__v1 = 10  # Private attribute
