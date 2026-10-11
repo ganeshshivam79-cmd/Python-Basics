@@ -44,6 +44,30 @@ df = pd.DataFrame({
 dates = pd.date_range(start="2025-01-01", end="2035-01-01", freq="YS")
 
 
+##########################################################################################################
+
+import pandas as pd
+from datetime import datetime, timedelta
+
+# Create a DataFrame with an id column
+df = pd.DataFrame({"id": [1, 2, 3, 4, 5, 6, 7, 8, 9]})
+
+# Generate dates starting from 2026-10-11, skipping Sundays
+start_date = datetime(2026, 10, 11)
+dates = []
+current_date = start_date
+
+while len(dates) < len(df):
+    # Skip Sundays (weekday() returns 6 for Sunday)
+    if current_date.weekday() != 6:
+        dates.append(current_date)
+    current_date += timedelta(days=1)
+
+df["date"] = dates
+print(df)
+#######################################################################################################################
+
+
 'D' → daily
 'ME' → month end
 'MS' → month start
